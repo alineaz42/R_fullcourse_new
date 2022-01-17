@@ -40,6 +40,33 @@ x2 < c(3,2,1)
 x3 <- c(5,3,2)
 class(x1)
 
+# import data from excel and export it in csv or txt format
+# import from excel
+1. Goto File 
+2. Import Data set
+3. From Excel
+4. Select the range and other criteria and copy the code 
+5. paste the code and run 
+
+or.>----------------------
+library(readxl)
+NameOfDataSet <- read_excel("FilePath",sheet="Sheet1",range="A2:D4")
+View(NameOfDataSet)
+
+# exporting data set 
+# creat a data set and the use write.table functions to export it
+
+
+subject <- c("a","b","c")
+names <- c("neaz","ami","amar")
+roll <- c(1722019:1722030)
+df <- data.frame(subject,names,roll)
+
+write.table(df,row.names=T,sep="c") # csv file
+wirite.table(df,row.names=T,sep="\t")
+write.table(df,row.names=T,sep=" ")
+
+
 
 gender<- c("Male","Female")
 x4 <- 1:10

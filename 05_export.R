@@ -19,3 +19,4 @@ write.csv(DataToExport,file = "DataToExport.csv",row.names=F)
 write.table(DataToExport,file="NameOfFile.extension",row.names = FALSE,sep=" ")
 
 # also same for the txt use .txt and sep = "\t" in write.table
+
