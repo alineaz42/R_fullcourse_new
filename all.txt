@@ -146,4 +146,122 @@ name <- read_excel("location",sheet="Sheet1)
 view(name)
 
 
+# 4th video
+
+
+library(readxl)
+LungCapData <- read-excel("filelocation",sheet="Sheet1")
+View(LungCapData)
+
+# or go manually to load excel data
+
+# creat a datafram first then follow the code below
+
+DataToExport <- data.frame(Subject, aGe, Gender, Score)
+DataToExport
+
+
+write.table(DataToExport, file="ExprotData.csv",row.names=T,sep=",")
+# for txt sep="\t"
+
+
+write.csv(filename,file="DataToExport.csv",row.names=T)
+
+
+lcd <- read.table(file.choose(),header=T,sep="c")
+
+names(lcd)
+mean(lcd[,2])
+
+attach(lcd)
+
+view(lcd)
+
+summary(lcd)
+
+
+# to make factor
+Smoke <- as.factor(Smoke)
+
+
+Gender <- as.factor(Gender)
+
+class(lcd)
+levels(Smoke) # will return if not a factor will return error or null something like that
+
+
+# 8th video subsetting data in R
+
+lcd <- read.table(file.choose(),header=T,sep="\t")
+attach(lcd)
+detach(lcd)
+
+FemaleData<- lcd[Gender=="female"]
+FemaleAndSmoke <- cld[Gender=="female" & Smoke="yes"]
+MaleOver15 <- lcd[Gender=="male" & Age >= 15]
+
+
+# 9th logic statement in R
+
+lcd <- read.table(file.choose(),header = T,sep="\t")
+attach(lcd)
+head(Age)
+
+temp <- Age>15
+tem2 <- as.numeric(temp)
+head(lcd)
+femSmoke <- Gender =="female" & Smoke == "yes"
+
+femSmoke <- lcd[femSmoke]
+
+length(femSmoke)
+MoreData <-cbind(lcd,femSmoke)
+head(MoreData)
+
+write.csv(fileLocation,file="Nameoffile.csc",row.names=T)
+
+
+rm(list=ls())
+# 10th set working directory
+getwd()
+filePath <-"E:/../../../"
+setwd(filePath)
+
+
+
+load("FirstProject.RData")
+load(file.choose())
+
+# 11th R script i alread know thins one
+# 12 installing R packages
+help("install.packages")
+
+install.packages("epiR")
+install.packages() # will let me choose from the list
+remove.packages("epiR")
+
+# 13 apply function
+sp <- read.table(file.choose(),header=T,sep=",")
+
+apply(
+	sp,
+	MARGIN=2 , # COLUM WISE IF 1 THEN ROW WISE
+	FUN=mean,
+	na.rm=T
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
