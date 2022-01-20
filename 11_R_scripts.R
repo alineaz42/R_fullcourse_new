@@ -11,3 +11,23 @@
 
 # i am working in r script since the begining
 # ctrl+shift+c to comment
+
+### first load ###
+
+lcd <- read.table(file.choose(),header=T,sep="\t")
+
+### attach it###
+attach(lcd)
+# check if some need to make as factor
+Smoke <- as.factor(Smoke)
+Gender <- as.factor(Gender)
+Caesarean <- as.factor(Caesarean)
+
+newData <- data.frame(LungCap,Age,Height,Smoke,Gender,Caesarean)
+newData
+
+
+meanAge <- mean(Age)
+z <- summary(newData)
+z
+save.image("SecondProject.Rdata")

@@ -139,3 +139,11 @@ df <- read.table(file.choose(),header = T,sep = "\t")
 
 # video 3rd reading excel files
 
+
+go to read menu to read a excel file 
+library(reaxl)
+name <- read_excel("location",sheet="Sheet1)
+view(name)
+
+
+
