@@ -40,3 +40,12 @@ rowMeans(stockData)
 meanData <-rowMeans(stockData,na.rm=T)
 plot(rowMeans(stockData,na.rm=T),main="Stock Means Per Day",ylab="Price",xlab="Day")
 plot(meanData,type="l",main="Stock Price Per Day",ylab="Price",xlab="Day")
+
+
+
+lcd <- read.table(file.choose(),header = T)
+head(lcd)
+attach(lcd)
+length(Age)
+apply(Age,1, FUN=mean)
+head(Age)
