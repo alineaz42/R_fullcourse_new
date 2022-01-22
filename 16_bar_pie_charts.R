@@ -28,3 +28,16 @@ percent <- count/length(Gender)
 
 barplot(count,main = "Number of Male and Female")
 barplot(percent,main="Percent of Male and Female")
+barplot(percent,main="Percetage of Male and Female",xlab="Gender",ylab="Percetage",las=1)
+barplot(percent,main="Percentage of Male and Female",
+        xlab="%",
+        ylab="Gender",horiz = T,
+        names.arg = c("Female","Male"),
+        las=1
+        )
+
+pie(count,main="Title")
+pie(count,main="Title",
+    col=heat.colors(n)
+    )
+box()
