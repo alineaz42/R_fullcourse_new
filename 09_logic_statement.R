@@ -20,3 +20,9 @@ head(lcd)
 head(MoreData)
 # to clear the memory in r space
 rm(list=ls())
+
+
+x <- 10
+y <- 12
+x+y
+sum(x,y)
