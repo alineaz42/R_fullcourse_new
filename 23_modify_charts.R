@@ -70,4 +70,22 @@ plot(Age[Gender=="female"],Height[Gender=="female"],xlab="Age",
 # relabeling the scale in plots
 
 
-# video 10.16 min
+# par(mfrow=c(1,1))
+plot(Age,LungCap)
+attach(lcd)
+names(lcd)
+Smoke <- as.factor(Smoke)
+Gender <- as.factor(Gender)
+
+df <- data.frame(LungCap,Age,Height,Smoke,Gender)
+
+attach(df)
+plot(Age,Height,main="Title")
+#
+
+
+# values in x and y axix number
+plot(Age,Height,main="Title",axes = F)
+axis(side=1,at=c(6,12.3,15),labels = c("sev","mean","15"))
+axis(side=2,at=c(55,65,75),s=c(55,65,75))
+box()
