@@ -13,3 +13,10 @@ barplot(table1,beside=T,legend.text=c("Non-smoker","Smoker"),main="Title",las=1,
 
 
 # mosaic plot
+mosaicplot(
+  table1,
+  col=c(4,2),
+  ylab="Gendeer",
+  main="Title",
+  las=1
+)

@@ -11,3 +11,18 @@ hist(LungCap,prob=T,ylim = c(0,.2),xlim=c(0,18),breaks=15,main="myHIst",las=1)
 
 
 lines(density(LungCap),col=2,lwd=3)
+
+
+
+
+plot(LungCap,Age)
+plot(Age,LungCap)
+
+
+femaleLungCap <- LungCap[Gender=="female"]
+head(femaleLungCap)
+length(femaleLungCap)
+
+
+stem(femaleLungCap)
+stem(femaleLungCap,scale=2)
