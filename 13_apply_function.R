@@ -49,3 +49,16 @@ attach(lcd)
 length(Age)
 apply(Age,1, FUN=mean)
 head(Age)
+
+
+stock <- read.csv(file.choose(),header=T)
+head(stock)
+
+apply(stock,mean,2,na.rm=T)
+apply(stock[,2],2,mean,na.rm=T)
+help(apply)
+attach(stock)
+stock[,2]
+names(stock)
+Stock1
+

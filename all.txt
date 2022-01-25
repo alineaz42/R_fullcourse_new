@@ -41,6 +41,19 @@ x3 <- c(5,3,2)
 class(x1)
 
 # import data from excel and export it in csv or txt format
+# data: 25.1.22
+# from apply function
+
+# stock price data set
+stockPrice = read.csv(file.choose(),header=T)
+
+apply(stockPrice,FUN=mean,na.rm=T)
+
+apply(stockPrice,mean,2,na.rm=T)
+
+
+
+
 # import from excel
 1. Goto File 
 2. Import Data set
