@@ -51,6 +51,32 @@ apply(stockPrice,FUN=mean,na.rm=T)
 
 apply(stockPrice,mean,2,na.rm=T)
 
+# tapply function
+x = 3
+a.1 = 13
+
+
+class(x.1)
+
+df <- read.table(file.choose(),header=T)
+
+head(df)
+attach(df)
+names(df)
+class(Smoke)
+
+Smoke <- as.factor(Smoke)
+Gender <- as.factor(Gender)
+
+lcd <- data.frame(LungCap, Age, Height, Smoke, Gender)
+summary(lcd)
+
+tapply(Age,Smoke,mean,na.rm=T)
+
+
+
+
+
 
 
 

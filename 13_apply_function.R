@@ -62,3 +62,18 @@ stock[,2]
 names(stock)
 Stock1
 
+apply(Stock1,MARGIN=2,FUN = mean)
+class(Stock1)
+
+myMatrix <- matrix(Stock1)
+myMatrix
+apply(myMatrix,MARGIN = 2,FUN = mean)
+
+matA <- matrix(Stock1,Stock2,Stock3,nrow=3,ncol=10)
+view(stock)
+stock
+stock <- stock[7,3]<-1.36
+stock
+apply(Stock1,2,mean,na.rm=T)
+Stock1
+class(Stock1)

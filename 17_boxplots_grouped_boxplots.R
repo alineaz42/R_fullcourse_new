@@ -41,7 +41,6 @@ femData <- as.numeric(femData)
 head(femData)
 boxplot(femData)
 
-
 boxplot(LungCap~Gender,main="Boxplot of LungCap seperated by Gender",las=1)
 boxplot(
   LungCap~Gender,
