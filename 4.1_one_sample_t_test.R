@@ -39,3 +39,19 @@ attach(TEST)
 conf.int
 detach(TEST)
 
+
+
+
+ls()
+rm(list=ls())
+
+
+
+t.test(df$Age,mu=8,alternative = "less",conf.level = .95)
+
+x <-t.test(df$Age,mu=8,conf=.95)
+
+x$p.value
+x$null.value
+
+
