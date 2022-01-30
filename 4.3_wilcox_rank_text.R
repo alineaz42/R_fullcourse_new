@@ -15,9 +15,14 @@ head(lcd)
 rm(df)
 
 Age
-detach(df)
+detach(df) 
 
 attach(lcd)
 
 help(wilcox.test)
 ?wilcox.test
+# box plot first
+boxplot(LungCap~Smoke)
+# Ho: Median of LungCap of smoker= Median of LungCap of non-smokers
+
+wilcox.test(LungCap~Smoke,mu=0,alt="two.sided",conf.int=T,conf.level=0.95,paired=F,exact=T,correct=T)
