@@ -22,3 +22,5 @@ plot(Age,Height,main="Age vs Height Scatterplot",
 abline(lm(Height~Age),col=2,lwd=3)
 lines(smooth.spline(Age,Height),col=3,lty=4,lwd=3)
 cor(Age,Height)
+abline(lm(Height~Age),col=4,lwd=3)
+lines(smooth.spline(Age,Height),col=3,lty=4,lwd=3)
