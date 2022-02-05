@@ -92,3 +92,60 @@ test.stat2
 t.test(d$d.weight~d$feed,paired=F,var.eq=F)
 # is not working the bellow code 
 wilcox.test(d$d.weight[d$feed=="casein"],d$d.weight[d$feed=="meatmeal",paired=F])
+
+
+
+
+
+
+
+######################
+###bootstrap#####
+######################
+
+
+set.seed(112358)
+n <- length(d$feed)
+n
+B <- 10000
+variable <- d$d.weight
+
+BootstarpSamples <- matrix(sample(variable,size = n*B,replace=T),nrow=n,ncol=B)
+BootstarpSamples[1:23]
+length(BootstarpSamples)
+dim(BootstarpSamples)
+BootstarpSamples[1:23,2]
+#------------------------------------------------------
+Boot.test.stat1 <- rep(0,B)
+Boot.test.stat2 <- rep(0,B)
+
+for (i in 1:B){
+  Boot.test.stat1[i]<- abs(mean(BootstarpSamples[1:12,i])-mean(BootstarpSamples[13:23,i]))
+  Boot.test.stat2[i]<- abs(median(BootstarpSamples[1:12,i])-median(BootstarpSamples[13:23,i]))
+}
+
+
+test.stat1;test.stat2;
+round(Boot.test.stat1[1:20],1)
+round(Boot.test.stat2[1:20],1)
+
+# P-values
+# Under set of assumptions, what is the
+# probability of getting the observed test statistic or one
+# or more extreme, if the null 
+# hypothesis is True
+(Boot.test.stat1>=test.stat1)[1:20]
+(Boot.test.stat2>=test.stat2)[1:20]
+mean(Boot.test.stat1>=test.stat1)
+mean(Boot.test.stat2>=test.stat2)
+# as the p values are greater than 0.05 we may reject the null hypothesis
+# p = 8% 
+# interpretation: we don't have enough data or we may say that
+#   two types of the feed has a significant difference in weight
+# chick data
+
+#1. Statistical Significant 2. Mathmatical Significant
+# 1. The diets may have significance and may need to explore more
+# 2. 
+
+
