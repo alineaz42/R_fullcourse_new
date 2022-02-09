@@ -45,3 +45,4 @@ pairs(lcd[,1:3])
 # for all the numerical data correlation
 cor(lcd[,1:3])
 # we also can change the method also like spearman or kendall
+cov(lcd[,1:3])
