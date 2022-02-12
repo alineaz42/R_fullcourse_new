@@ -20,3 +20,7 @@ summary(mod3)
 par(mfrow=c(2,2))
 plot(mod3)
 
+x <- c(4,3,2)
+y <- c("4","3","2")
+pie(x,col=c(4,3,2),labels = y)
+help(pie)
